@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width:500px;
+            height: 300px;
+            margin: 100px auto;
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 10px;
+            box-sizing: border-box;
+            
+            
+        }
+        button {
+            margin:50px 10px;
+            padding: 20px;
+            
+        }
+        button:first-child{
+            float: left;
+        }
+        button:last-child{
+            float:right;
+        }
+        #display {
+            border: 1px solid salmon;
+            height: 80px;
+            width: 90px;
+            margin: auto;
+           font-size: 70px;
+           font-weight: bold;
+        }
+        button{
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 5px;
+            box-shadow: 5px 5px 4px;
+            font-size: 18px;
+        }
+        button:hover{
+            background-color: rgb(102, 84, 71);
+            transition: 2s;
+            cursor: pointer;
+            
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="display">
+        <h1>Counter</h1>
+        <div id="display">0</div>
+    </div>
+    <div class="button">
+        <button type="button" class="button">Discrease</button>
+        <button type="button" class="button">Reset</button>
+        <button type="button" class="button">Increase</button>
+    </div>
+</div>
+    <script>
+        let count =0;
+        const tampil = document.getElementById('display');
+        
+        const kurang = document.getElementsByClassName('button')[1];
+        kurang.addEventListener('click', function(){
+            count --;
+            tampil.innerHTML = count;
+        })
+
+        const tambah = document.getElementsByClassName('button')[3];
+        tambah.addEventListener('click', function(){
+            count ++;
+            tampil.innerHTML = count;
+        })
+        
+        const reset = document.getElementsByClassName('button')[2];
+        reset.addEventListener('click', function(){
+            count =0;
+            tampil.innerHTML = count;
+        })
+
+
+       
+
+        
+    </script>
+</body>
+</html>
